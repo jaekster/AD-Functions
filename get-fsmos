@@ -1,0 +1,17 @@
+function get-fsmos {
+$domain = get-addomain
+$forest = get-adforest
+$DNM_F = $forest.DomainNamingMaster
+$IM_D = $domain.InfrastructureMaster
+$PDC_D = $domain.PDCEmulator
+$RID_D = $domain.RIDMaster
+$SM_F = $forest.SchemaMaster
+
+write-host "FOREST LEVEL MASTERS"
+write-host "Domain Naming Master:	"$DNM_F
+write-host "Schema Master:		"$SM_F
+write-host ""
+write-host "DOMAIN LEVEL MASTERS"
+write-host "Infrastructure Master:	"$IM_D
+write-host "PDC Emulator:		"$PDC_D
+write-host "RID Master:		"$RID_D}
