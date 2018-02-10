@@ -22,4 +22,4 @@ write-host ""
 write-host "DOMAIN LEVEL MASTERS"
 write-host "Infrastructure Master:	"$IM_D
 write-host "PDC Emulator:		"$PDC_D
-write-host "RID Master:	  	"$RID_D}
+write-host "RID Master:	    	"$RID_D}
