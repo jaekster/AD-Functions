@@ -1,12 +1,20 @@
 function get-fsmos {
+#get domain info
 $domain = get-addomain
+
+#get forest info
 $forest = get-adforest
+
+#map forest fsmos to variables
 $DNM_F = $forest.DomainNamingMaster
+$SM_F = $forest.SchemaMaster
+
+#map domain fsmos to variables
 $IM_D = $domain.InfrastructureMaster
 $PDC_D = $domain.PDCEmulator
 $RID_D = $domain.RIDMaster
-$SM_F = $forest.SchemaMaster
 
+#write fsmos to the console
 write-host "FOREST LEVEL MASTERS"
 write-host "Domain Naming Master:	"$DNM_F
 write-host "Schema Master:		"$SM_F
